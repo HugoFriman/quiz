@@ -1,0 +1,312 @@
+/* Base styles for the entire app */
+body {
+  font-family: "DM Sans", sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  color: #2d264b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+/* Style of the container for the quiz */
+.App {
+  width: 500px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 60px 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Style for the overlay for popup eg the background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 9999; /* Ensure the overlay is on top of everything else */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style of the close button */
+.close-button {
+  background-color: rgb(147, 147, 147);
+  border-radius: 20px;
+  color: rgb(255, 255, 255); /* Change the color to your preference */
+  font-size: 12px; /* Adjust the font size as needed */
+  cursor: pointer;
+  outline: none; /* Remove the default focus outline */
+  position: absolute;
+  top: 20px; /* Adjust the top distance as needed */
+  left: 20px; /* Adjust the right distance as needed */
+
+}
+
+/* Style for the question counter */
+.question-counter .active-question-no {
+  font-size: 24px;
+  font-weight: 400;
+  color: #5400e2;
+}
+
+/* Styles for the  greyed out total questions*/
+.question-counter .totalQuestion {
+  font-size: 24px;
+  font-weight: 200;
+  color: #9c9c9c;
+}
+
+/* Styles div containing the questions counter*/
+.question-counter {
+    display: flex ;
+    justify-content: right;
+    align-items: center;
+}
+
+/* Styles for the text of the question can be change out for h2*/
+.question-text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color:#424242
+} 
+
+/* Styles for read more under the question, supposed to look like a clickable link*/
+.read-more-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #5400e2  ;
+}
+
+/* Styles for the container containing the answer alternatives*/
+.quiz-container ul {
+  margin-top: 20px;
+  margin-left: -40px;
+  color:#424242
+}
+
+/* Hiding a list*/
+ul.options-list {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  list-style: none; /* Remove default list style */
+}
+
+
+/* Styles for the containers of the buttons containing the answers*/
+.App ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Style for the overlay for popup eg the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 999; /* Ensure the overlay is on top of everything else */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Styles for the warning pop-up */
+.warning-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  max-width: 400px;
+  text-align: center;
+  position: absolute; /* Ensure that the warning popup is positioned relative to the overlay */
+  z-index: 1000; /* Ensure the warning popup is on top of the overlay */
+}
+
+.warning-popup h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+  color:#424242
+}
+
+.warning-popup p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color:#424242
+}
+
+/* Styles title in the introduction to the three parts */
+.introductory-explanation {
+  text-align: left;
+  color:#424242
+}
+
+.introductory-explanation h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color:#424242
+}
+
+
+/* Styles the buttons in the which are supposed to be filled with blue that are supposed to be highlighed*/
+button.filled {
+  background: #5400e2;
+  border-radius: 9px;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  width: 40%;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+
+/* Styles the buttons in the which are supposed to be empty with which are of a lower relevance than than the filled buttons*/
+button.empty  {
+  background: #ffffff;
+  border-radius: 9px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 33%;
+  outline: none;
+  border:1px solid #9c9c9c;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+/* Styles the buttons in the which are supposed to be filled with blue that are supposed to be highlighed*/
+button.intro {
+  background: #5400e2;
+  border-radius: 9px;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+
+/* Style for the disabled empty buttons */
+button:disabled {
+  background-color: #e7e8e9; 
+  color: #9c9c9c;
+  cursor: not-allowed;
+  border: 1px solid #9c9c9c;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+ }
+
+/* Style for the buttons in the quiz container*/
+.question ul button {
+  text-decoration:none;
+  list-style:none;
+  color:#000000;
+  font-size:16px;
+  text-align: left;
+  background:#ffffff;
+  border:1px solid #9c9c9c;
+  border-radius: 10px;
+  padding:11px;
+  margin-top:15px;
+  width: 100%;
+  cursor:pointer
+ }
+ .question ul button:hover {
+  background-color: #f3f1ef; /* Change to the color you want on hover */
+  color: rgb(0, 0, 0);
+ }
+
+
+ .question ul button.selected {
+  background-color: #ebebeb; /* Change to the color you want on hover */
+  color: rgb(0, 0, 0);
+  border:1px solid #6d16ff;
+ }
+
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+  .warning-popup{
+    width: 60%;
+  }
+  .introductory-explanation button{
+    width: 50%;
+  }
+  .warning-popup button{
+    width: 40%;
+    font-size: 14px;
+  }
+  .navigation-buttons button{
+    width: 40%;
+    font-size: 14px;
+  }
+
+  .question-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .question ul button {
+    padding:10px;
+    margin-top:10px;
+   }
+
+   .question-counter .active-question-no{
+    font-size: 20px;
+   }
+
+   .question-counter .totalQuestion{
+    font-size: 20px;
+   }
+   
+   button{
+    font-size: 14px;
+   }
+
+}
+
+
+.warning-popup-buttons-container {
+  display: flex;
+  justify-content: space-between;
+};
+
